@@ -18,6 +18,8 @@ public class Es2Git {
 
 
         System.out.println("Cheguei");
+        
+        System.out.println("asd");
     }
     
 }
