@@ -13,43 +13,64 @@ import java.util.Scanner;
  */
 public class Es2Git {
 
+    public static int getArab(String c){
+        
+        
+        
+       
+        int num = 0;
+        
+        
+        
+        switch(c){
+            case "I" : 
+                num = 1;
+                break;
+            case "X": 
+                num = 10;
+                break;
+            case "C": 
+                num = 100;
+                break;
+            case "M": 
+                num = 1000;
+                break;
+            case "V": 
+                num = 5;
+                break;
+            case "L": 
+                num = 50;
+                break;
+            case "D": 
+                num = 500;
+                break;
+            default: 
+                num = -1;
+        }
+        
+       return num;
+        
+        
+    }
+    
+    public static String toUpper(String c){
+        return c.toUpperCase();
+    }
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
 
-
+       
        Scanner scan = new Scanner(System.in);
-        int num = 0;
-        
+       
         System.out.println("Insira um caracter: I , X , C , M , V , L , D:");
         String car = scan.next();
         
-        switch(car){
-            case "I" : case "i":
-                num = 1;
-                break;
-            case "X": case "x":
-                num = 10;
-                break;
-            case "C": case "c":
-                num = 100;
-                break;
-            case "M": case "m":
-                num = 1000;
-                break;
-            case "V": case "v":
-                num = 5;
-                break;
-            case "L": case "l":
-                num = 50;
-                break;
-            case "D": case "d":
-                num = 500;
-                break;
-        }
         
-        System.out.println("Numero em arabico: " + num);
+        
+        System.out.println(getArab(toUpper(car)));
         
     }
     
