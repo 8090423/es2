@@ -49,15 +49,7 @@ public class Es2GitTest {
         assertEquals(expResult, result);
 
     }
-    @Test
-    public void testGetArab_Ilow() {
-        System.out.println("getArab");
-        String c = "i";
-        int expResult = 1;
-        int result = Es2Git.getArab(c);
-        assertEquals(expResult, result);
-
-    }
+    
 
     @Test
     public void testGetArab_X() {
@@ -119,5 +111,36 @@ public class Es2GitTest {
         assertEquals(expResult, result);
 
     }
+    
+    @Test
+    public void testGetArab_invalid() {
+        System.out.println("getArab");
+        String c = "o";
+        int expResult = -1;
+        int result = Es2Git.getArab(c);
+        assertEquals(expResult, result);
+
+    }
+    
+    
+
+    
+    /**
+     * Test of toUpper method, of class Es2Git.
+     */
+    @Test
+    public void testToUpper() {
+        System.out.println("toUpper");
+        String c = "c";
+        String expResult = "C";
+        String result = Es2Git.toUpper(c);
+        assertEquals(expResult, result);
+        
+    }
+
+    
+    
+    
+    
 
 }
