@@ -5,6 +5,8 @@
  */
 package es2.git;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Titi_
@@ -17,10 +19,37 @@ public class Es2Git {
     public static void main(String[] args) {
 
 
-        System.out.println("Cheguei");
-        System.out.println("asd");
+       Scanner scan = new Scanner(System.in);
+        int num = 0;
         
-        System.out.println("ola tiago");
+        System.out.println("Insira um caracter: I , X , C , M , V , L , D:");
+        String car = scan.next();
+        
+        switch(car){
+            case "I" : case "i":
+                num = 1;
+                break;
+            case "X": case "x":
+                num = 10;
+                break;
+            case "C": case "c":
+                num = 100;
+                break;
+            case "M": case "m":
+                num = 1000;
+                break;
+            case "V": case "v":
+                num = 5;
+                break;
+            case "L": case "l":
+                num = 50;
+                break;
+            case "D": case "d":
+                num = 500;
+                break;
+        }
+        
+        System.out.println("Numero em arabico: " + num);
         
     }
     
